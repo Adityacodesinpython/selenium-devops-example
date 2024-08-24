@@ -30,7 +30,7 @@ public class FirefoxTest {
     @Before
     public void prepare() {
 
-        testUrl = "https://leftstick.github.io/";
+        testUrl = "https://www.youtube.com/";
 
         System.setProperty("webdriver.gecko.driver","webdriver/geckodriver");
 
