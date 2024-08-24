@@ -20,10 +20,10 @@ public class ChromeDriverTest {
 
     @Before
     public void prepare() {
-        // Set up ChromeDriver
+        //setup chromedriver
         System.setProperty(
                 "webdriver.chrome.driver",
-                "C:/path/to/chromedriver.exe");  // Use the absolute path
+                "webdriver/chromedriver");
 
         testUrl = "https://www.youtube.com/";
 
