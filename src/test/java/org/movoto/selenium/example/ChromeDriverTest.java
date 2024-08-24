@@ -37,25 +37,26 @@ public class ChromeDriverTest {
         driver.get(testUrl);
     }
 
-    @Test
-    public void testTitle() throws IOException {
-        // Find elements by attribute lang="READ_MORE_BTN"
-        List<WebElement> elements = driver
-                .findElements(By.cssSelector("[lang=\"READ_MORE_BTN\"]"));
+   @Test
+public void testTitle() throws IOException {
+    // Find elements by attribute lang="READ_MORE_BTN"
+    List<WebElement> elements = driver
+            .findElements(By.cssSelector("[lang=\"READ_MORE_BTN\"]"));
 
-        // Click the selected button
-        elements.get(0).click();
+    // Click the selected button
+    elements.get(0).click();
 
-        // Wait for the page title to change and assert it
-        assertTrue("The page title should be changed as expected",
-                (new WebDriverWait(driver, 5))
-                        .until(new ExpectedCondition<Boolean>() {
-                            public Boolean apply(WebDriver d) {
-                                return d.getTitle().equals("我眼中软件工程人员该有的常识");
-                            }
-                        })
-        );
-    }
+    // Wait for the page title to change and assert it
+    assertTrue("The page title should be changed as expected",
+            (new WebDriverWait(driver, java.time.Duration.ofSeconds(5)))
+                    .until(new ExpectedCondition<Boolean>() {
+                        public Boolean apply(WebDriver d) {
+                            return d.getTitle().equals("我眼中软件工程人员该有的常识");
+                        }
+                    })
+    );
+}
+
 
     @After
     public void teardown() throws IOException {
