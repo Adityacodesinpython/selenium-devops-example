@@ -35,7 +35,7 @@ public class ChromeDriverTest {
                 "webdriver.chrome.driver",
                 "webdriver/chromedriver");
 
-        testUrl = "https://leftstick.github.io/";
+        testUrl = "https://www.youtube.com/";
 
         // Create a new instance of the Chrome driver
         // Notice that the remainder of the code relies on the interface,
